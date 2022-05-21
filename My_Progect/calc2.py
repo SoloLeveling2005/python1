@@ -1,9 +1,13 @@
+
+
+
+
 import math
 a = ""
 d = ""
 b = ""
 input = str(input("Введите выражение, знаки(+,-,/,*,**,%,//,√): "))
-# b = str(input("Введите знак(+,-,/,*,**,%,//,sqrt) : "))
+
 
 if input.find("+") == 1:
     b = "+"
@@ -93,4 +97,4 @@ else:
             print(a // d)
     calc(a, b, d)
 
-# .split (',')
+
