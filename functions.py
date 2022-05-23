@@ -1,7 +1,7 @@
 # Функция
-def say_hi(a):
+def calc(a):
     print("Hi, " + a + "!")
 
 
 
-say_hi("Mansur")
+calc("Mansur")

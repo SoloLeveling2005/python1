@@ -1,16 +1,4 @@
-# НЕ РАБОЧАЯ
-# НЕ РАБОЧАЯ
-# НЕ РАБОЧАЯ
-# НЕ РАБОЧАЯ
-# НЕ РАБОЧАЯ
-# НЕ РАБОЧАЯ
-# НЕ РАБОЧАЯ
-# НЕ РАБОЧАЯ
-# НЕ РАБОЧАЯ
-# НЕ РАБОЧАЯ
-# НЕ РАБОЧАЯ
-
-
+# Готов!
 
 
 import math
@@ -33,56 +21,64 @@ for i in input:
         past_number += i
 
 line.append(past_number)
-print('line')
-print(line)
-
-multiplier = []
-in_brackets = "false"
-x = 0
-
-# 22*22*22
 
 
-# if past_number == "":
-#     past_number = meaning
-#     zero += 1
-#     print(meaning)
-#     break
-# else:
-#     meaning = str(past_number) + str(meaning)
-#     input.pop(zero - 1)
-#     print("zero:")
-#
-#     print(zero - 1)
-#     zero -= 1
-#     # print(input)
-#     # print("=")
-#     # print(meaning)
-#     past_number = ""
-#
-#     break
+def calc(x):
+    for x in line:
+        if x == "*":
+            index_sign = line.index(x)
+            index_sign_past = index_sign - 1
+            index_sign_future = index_sign + 1
+            result = int(line[index_sign_past]) * int(line[index_sign_future])
+            line[index_sign_past] = result
+            line.pop(index_sign)
+            line.pop(index_sign)
+        elif x == "/":
+            index_sign = line.index(x)
+            index_sign_past = index_sign - 1
+            index_sign_future = index_sign + 1
+            result = int(line[index_sign_past]) / int(line[index_sign_future])
+            line[index_sign_past] = int(result)
+            line.pop(index_sign)
+            line.pop(index_sign)
+        elif x == "+":
 
-# while y < x:
-#    try:
-#       for i in signs:
-#
-#            if input[y] == i:
-#                input[y] = i
-#                print(input[y])
-#                print(i)
-#                print("Все норм")
-#                sign = i;
-#
-#        if sign == "":
-#            input[y] = input[y] + input[y+1]
-#            input.pop(y+1)
-#            print(input)
-#            y -= 1
-#        else:
-#            y +=1
-#        y += 1
-#        sign = ""
-#
-#        print(input)
-#    except:
-#        continue
+            try:
+                if "*" in line or "/" in line:
+                    pass
+                else:
+                    # print(line)
+                    index_sign = line.index(x)
+                    index_sign_past = index_sign - 1
+                    index_sign_future = index_sign + 1
+                    result = int(line[index_sign_past]) + int(line[index_sign_future])
+                    line[index_sign_past] = int(result)
+                    line.pop(index_sign)
+                    line.pop(index_sign)
+            except:
+                pass
+        elif x == "-":
+
+            try:
+                if "*" in line or "/" in line:
+                    pass
+                else:
+                    # print(line)
+                    index_sign = line.index(x)
+                    index_sign_past = index_sign - 1
+                    index_sign_future = index_sign + 1
+                    result = int(line[index_sign_past]) - int(line[index_sign_future])
+                    line[index_sign_past] = int(result)
+                    line.pop(index_sign)
+                    line.pop(index_sign)
+            except:
+                pass
+
+
+while True:
+    if len(line) == 1:
+        break
+    else:
+        calc(line)
+
+print("Ответ:" + str(line[0]))
