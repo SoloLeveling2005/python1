@@ -64,8 +64,8 @@ def delete():
     global first_value
     global second_value
     del_var = varInput["text"]
-    l = len(del_var)
-    del_var = del_var[:l - 1]
+    linn = len(del_var)
+    del_var = del_var[:linn - 1]
     varInput["text"] = del_var
 
 
