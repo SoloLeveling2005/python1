@@ -25,3 +25,17 @@ while True:
     time.sleep(0.00001)
     print(f"{hours}:{minutes}" + ":" + str(seconds))
 # код после цикла
+
+
+
+
+
+
+
+
+
+
+
+
+
+
