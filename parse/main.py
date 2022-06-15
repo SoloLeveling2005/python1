@@ -62,7 +62,7 @@ def content():
         if tm > 9:
             tm = 1
         print("Обновился")
-print("dic" + str(dictionary_end))
+        print("dic" + str(dictionary_end))
 
 print(response.status_code)
 
