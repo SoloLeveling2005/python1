@@ -11,10 +11,10 @@ second_file_list_global = []
 third_file_list_global = []
 files = [[first_file, first_file_list_global], [second_file, second_file_list_global],
          [third_file, third_file_list_global]]
-# загружаем в память уже существующий файл на диске
-# workbook1 = openpyxl.load_workbook(file_name)
-#
-# worksheet1 = workbook1.active
+
+
+
+# создаем глобальный список в который загрузим все данные со всех файлов
 glob_list = []
 
 for i in files:
@@ -29,41 +29,23 @@ for i in files:
             mass_local.append(value)
         glob_list.append(mass_local)
 
-
-    # filter(None, i[1])
-    # i[1] = [x for x in i[1] if x]
-
     def iii():
         for ii in glob_list:
-            # print("ii" + str(ii[0]))
             if len(ii) == 0:
-                # print("ii")
                 del glob_list[0]
                 iii()
 
+
+# записываем в новый файл
 workbook2 = Workbook()
 worksheet2 = workbook2.active
 
-# row = 0
-# col = 1
-# for i in glob_list:
-#     row += 1
-#     for ii in i:
-#         print(ii)
-#         worksheet2.cell(row=row, column=col).value = str(ii)
-#         print(type(worksheet2[f'{col}{row}'][0]))
-#         col += 1
-#     col = 1
-#
-# workbook2.save("sample_example.xlsx")
-# iii()
-# print(i[1])
+
 print(glob_list)
 row = 0
 col = 1
 coll = 1
 for el in glob_list:
-
     print("el" + str(el))
     col = get_column_letter(coll)
     print(col)
@@ -77,3 +59,4 @@ for el in glob_list:
     row = 0
 
 workbook2.save("task1.xlsx")
+# записываем в новый файл

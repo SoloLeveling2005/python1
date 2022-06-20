@@ -2,7 +2,7 @@ import openpyxl
 from openpyxl import Workbook
 from openpyxl.utils import get_column_interval
 
-file_name = "exel.xlsx"
+file_name = "S:\Mansur\Programmer\Python\Git\python1\exel\HW\30_05_2022\exel.xlsx"
 
 # загружаем в память уже существующий файл на диске
 workbook1 = openpyxl.load_workbook(file_name)

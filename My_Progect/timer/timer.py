@@ -104,8 +104,8 @@ frm.grid()
 
 # поле для ввода отсчета времени
 varInput = StringVar()
-Label(width=37, font="15", text="Пример ввода: 1:12:30").place(x=10, y=20)
-Entry(width=37, font="15", textvariable=varInput).place(x=30, y=20)
+Label(width=37, font="15", text="Пример ввода: 1:12:30").place(x=0, y=20)
+Entry(width=37, font="15", textvariable=varInput).place(x=30, y=50)
 
 # часы
 hours_label = ttk.Label(frm, text="00")

@@ -11,12 +11,11 @@ second_file_list_global = []
 third_file_list_global = []
 files = [[first_file, first_file_list_global], [second_file, second_file_list_global],
          [third_file, third_file_list_global]]
-# загружаем в память уже существующий файл на диске
-# workbook1 = openpyxl.load_workbook(file_name)
-#
-# worksheet1 = workbook1.active
-glob_list = []
 
+
+# создаем глобальный список в который загрузим все данные со всех файлов
+glob_list = []
+# загружаем в память уже существующий файл на диске
 for i in files:
     workbook = openpyxl.load_workbook(i[0])
     worksheet = workbook.active
@@ -28,10 +27,6 @@ for i in files:
                 break
             mass_local.append(value)
         glob_list.append(mass_local)
-
-
-    # filter(None, i[1])
-    # i[1] = [x for x in i[1] if x]
 
     def iii():
         for ii in glob_list:
