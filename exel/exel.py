@@ -2,7 +2,7 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 import datetime
 
-wb = load_workbook("exel.xlsx")
+wb = load_workbook("sample.xlsx")
 
 ws = wb.active
 
