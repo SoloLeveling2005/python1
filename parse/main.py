@@ -24,8 +24,8 @@ def content():
         index = 0
         if response.status_code == 200:
             content = response.content
-            with open(file='new.html', mode="wb") as file:
-                file.write(content)
+            # with open(file='new.html', mode="wb") as file:
+            #     file.write(content)
             content = BeautifulSoup(response.text, 'lxml')
             text = content.find_all('div', class_="converter-container converter-container-in-grid")
             for i in text:

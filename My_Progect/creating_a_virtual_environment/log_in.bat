@@ -1,0 +1,1 @@
+call test/Scripts/activate.bat
