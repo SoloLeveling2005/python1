@@ -1,0 +1,6 @@
+p = requests.get("https://habrastorage.org/getpro/habr/upload_files/d1b/27f/fdb/d1b27ffdb98628cd31260a2541faa388.jpg")
+    out = open("img.jpg", "wb")
+    out.write(p.content)
+    out.close()
+
+Для скачивания картинки
